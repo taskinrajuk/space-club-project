@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Login - Space Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>🔑 সদস্য লগইন</h2>
+        <form id="loginForm">
+            <label for="memberID">মেম্বার আইডি:</label>
+            <input type="text" id="memberID" required>
+
+            <label for="password">পাসওয়ার্ড:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">লগইন করুন 🚀</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

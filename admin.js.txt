@@ -1,0 +1,43 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const pendingPosts = document.getElementById("pendingPosts");
+
+    // Sample pending posts (Replace with real data later)
+    const posts = [
+        { id: 1, title: "The Future of Space Travel", content: "Exciting missions await!", status: "pending" },
+        { id: 2, title: "Mars Colonization Updates", content: "New research findings on Mars...", status: "pending" }
+    ];
+
+    function displayPosts() {
+        pendingPosts.innerHTML = "";
+        posts.forEach(post => {
+            if (post.status === "pending") {
+                const postElement = document.createElement("div");
+                postElement.innerHTML = `
+                    <h3>${post.title}</h3>
+                    <p>${post.content}</p>
+                    <div class="admin-actions">
+                        <button class="approve-btn" onclick="approvePost(${post.id})">✅ Approve</button>
+                        <button class="reject-btn" onclick="rejectPost(${post.id})">❌ Reject</button>
+                    </div>
+                `;
+                pendingPosts.appendChild(postElement);
+            }
+        });
+    }
+
+    function approvePost(id) {
+        const post = posts.find(p => p.id === id);
+        post.status = "approved";
+        alert("✅ Post Approved!");
+        displayPosts();
+    }
+
+    function rejectPost(id) {
+        const post = posts.find(p => p.id === id);
+        post.status = "rejected";
+        alert("❌ Post Rejected!");
+        displayPosts();
+    }
+
+    displayPosts();
+});

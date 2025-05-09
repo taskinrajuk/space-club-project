@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Space Images</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🔭 NASA Space Feed</h1>
+    </header>
+    <main>
+        <section id="nasa-section">
+            <h2>🌌 Astronomy Picture of the Day</h2>
+            <img id="apod-image" src="" alt="NASA Astronomy Image">
+            <p id="apod-title"></p>
+            <p id="apod-description"></p>
+        </section>
+    </main>
+    <script src="nasa.js"></script>
+</body>
+</html>

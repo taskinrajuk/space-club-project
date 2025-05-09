@@ -1,0 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let memberID = document.getElementById("memberID").value;
+        let password = document.getElementById("password").value;
+
+        if (memberID === "rajuk123" && password === "spaceclub") {
+            alert("✅ লগইন সফল! 🚀");
+            window.location.href = "dashboard.html"; // মেম্বার ড্যাশবোর্ডে পাঠানো
+        } else {
+            alert("❌ ভুল মেম্বার আইডি বা পাসওয়ার্ড। আবার চেষ্টা করুন!");
+        }
+    });
+});

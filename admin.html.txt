@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Space Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🔧 Admin Dashboard</h1>
+        <button id="logoutBtn">🔓 Logout</button>
+    </header>
+    <main>
+        <section class="post-moderation">
+            <h2>📢 Pending Posts for Approval</h2>
+            <div id="pendingPosts"></div>
+        </section>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

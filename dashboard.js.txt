@@ -1,0 +1,31 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Display logged-in member info
+    const memberIDDisplay = document.getElementById("memberIDDisplay");
+    const memberNameDisplay = document.getElementById("memberNameDisplay");
+
+    memberIDDisplay.textContent = localStorage.getItem("memberID");
+    memberNameDisplay.textContent = "Taskin"; // You can replace this with dynamic data
+
+    // Handle post submission
+    const postForm = document.getElementById("postForm");
+    const postList = document.getElementById("postList");
+
+    postForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const postTitle = document.getElementById("postTitle").value;
+        const postContent = document.getElementById("postContent").value;
+
+        const postElement = document.createElement("div");
+        postElement.innerHTML = `<h3>${postTitle}</h3><p>${postContent}</p>`;
+        postList.appendChild(postElement);
+
+        postForm.reset();
+        alert("✅ Post published successfully!");
+    });
+
+    // Logout functionality
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+        localStorage.removeItem("memberID");
+        window.location.href = "login.html"; // Redirect to login page
+    });
+});
